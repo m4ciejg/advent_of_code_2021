@@ -22,4 +22,18 @@ public class Utils {
         }
         return temp;
     }
+
+    public static List<String> loadFileToListString(String txt){
+        var temp = new ArrayList<String>();
+        try{
+            Scanner sc = new Scanner(new File(finalPath + txt));
+            while(sc.hasNext()) {
+                temp.add(sc.nextLine());
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return temp;
+    }
 }

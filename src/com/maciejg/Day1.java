@@ -2,6 +2,7 @@ package com.maciejg;
 
 import java.util.List;
 import java.util.function.BinaryOperator;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Day1 {
@@ -18,8 +19,8 @@ public class Day1 {
             }
         }
 
-        long count = IntStream.range(0, inputs.size() - 3)
-                .filter(i -> inputs.get(i + 3) > inputs.get(i))
+        long count = IntStream.range(0, inputs.size() - 1)
+                .filter(i -> inputs.get(i + 1) > inputs.get(i))
                 .count();
 
         long count2 = IntStream.range(0, inputs.size() - 1)

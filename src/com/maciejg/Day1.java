@@ -1,11 +1,13 @@
 package com.maciejg;
 
 import java.util.List;
+import java.util.function.BinaryOperator;
+import java.util.stream.IntStream;
 
 public class Day1 {
     public static void main(String[] args) {
         var inputs = Utils.loadFileToList("input.txt");
-        part2(inputs);
+        part1(inputs);
     }
 
     private static void part1(List<Integer> inputs) {
@@ -16,8 +18,17 @@ public class Day1 {
             }
         }
 
-        System.out.println(numerOfIncreased);
+        long count = IntStream.range(0, inputs.size() - 3)
+                .filter(i -> inputs.get(i + 3) > inputs.get(i))
+                .count();
+
+        long count2 = IntStream.range(0, inputs.size() - 1)
+                        .map(i -> inputs.get(i + 1) > inputs.get(i) ? 1 : 0)
+                .sum();
+
+        System.out.println(count2);
     }
+
 
     private static void part2(List<Integer> inputs) {
         var numerOfIncreased = 0;

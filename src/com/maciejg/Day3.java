@@ -56,7 +56,6 @@ public class Day3 {
         var co2 = new StringBuilder();
         var numberOf0 = 0;
         var numberOf1 = 0;
-        var newCodes = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
             for (int j = 0; j < chars.size(); j++) {
                 if (Character.getNumericValue(chars.get(j)[i]) == 0) {
@@ -86,6 +85,10 @@ public class Day3 {
         System.out.println("Oxygen is: 101010101110");
         System.out.println("CO2 is     101010101110");
         System.out.println("Power consumption of submarine is " + (784 * 3311));
+        String hejka = null;
+        var lolo = String.format("%s", hejka);
+        System.out.println(lolo);
+        System.out.println(lolo.isEmpty());
     }
 
     private static List<char[]> removeBadValue(List<char[]> chars, int currentPosition, String correctStartingNumber) {

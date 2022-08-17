@@ -13,7 +13,7 @@ public class Utils {
     public static List<Integer> loadFileToList(String txt){
        var temp = new ArrayList<Integer>();
         try{
-            Scanner sc = new Scanner(new File(finalPathHome + txt));
+            Scanner sc = new Scanner(new File(finalPathWork + txt));
             while(sc.hasNext()) {
                 temp.add(Integer.parseInt(sc.nextLine()));
             }
@@ -27,7 +27,7 @@ public class Utils {
     public static List<String> loadFileToListString(String txt){
         var temp = new ArrayList<String>();
         try{
-            Scanner sc = new Scanner(new File(finalPathHome + txt));
+            Scanner sc = new Scanner(new File(finalPathWork + txt));
             while(sc.hasNext()) {
                 temp.add(sc.nextLine());
             }
